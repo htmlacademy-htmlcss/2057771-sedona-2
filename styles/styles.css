@@ -269,9 +269,15 @@ body {
   fill: #000000;
 }
 
-.navigation-user-icon:hover,
-.navigation-user-icon:focus-visible {
+.navigation-user-link:hover .navigation-user-icon,
+.navigation-user-link:focus-visible .navigation-user-icon {
   fill: #756157;
+}
+
+
+.navigation-user-link:active .navigation-user-icon,
+.navigation-user-link:focus-visible .navigation-user-icon {
+  opacity: 0.3;
 }
 
 .favorites-count {
@@ -1233,8 +1239,8 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   gap: 70px;
 }
 
@@ -1276,6 +1282,7 @@ body {
   -moz-appearance: none;
   appearance: none;
   width: 20px;
+  min-width: 20px;
   height: 20px;
   background-color: #ffffff;
   border-radius: 5px;
@@ -1295,6 +1302,7 @@ body {
   -moz-appearance: none;
   appearance: none;
   width: 20px;
+  min-width: 20px;
   height: 20px;
   background-color: #ffffff;
   cursor: pointer;
@@ -1317,6 +1325,7 @@ body {
 }
 
 .filter-control {
+  max-width: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1324,6 +1333,9 @@ body {
   -ms-flex-align: center;
   align-items: center;
   line-height: 23px;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
 }
 
 .filter-control:hover {
